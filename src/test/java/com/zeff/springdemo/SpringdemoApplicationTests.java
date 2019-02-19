@@ -1,5 +1,6 @@
 package com.zeff.springdemo;
 
+import com.zeff.springdemo.combinations.Combinations;
 import com.zeff.springdemo.linked.LinkedListCreator;
 import com.zeff.springdemo.linked.LinkedListReverse;
 import com.zeff.springdemo.linked.Node;
@@ -29,5 +30,11 @@ public class SpringdemoApplicationTests {
 
     }
 
+
+    @Test
+    public void testCombination() {
+//        Combinations.combinations(new ArrayList<>(),Arrays.asList(1,2,3),2);
+        Combinations.combinations(new ArrayList<>(),Arrays.asList(1,2,3,4,5),3);
+    }
 }
 

@@ -23,6 +23,8 @@ repositories {
 }
 
 dependencies {
+	compile('com.alibaba:fastjson:1.2.55')
+	compile("joda-time:joda-time:2.9.7")
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
