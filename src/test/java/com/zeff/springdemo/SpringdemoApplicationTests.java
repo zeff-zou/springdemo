@@ -20,6 +20,7 @@ public class SpringdemoApplicationTests {
 	public void contextLoads() {
         Node.printLinked(LinkedListCreator.createLinkedList(Arrays.asList(1, 2, 3, 4, 5, 6)));
         Node.printLinked(LinkedListReverse.reverse(LinkedListCreator.createLinkedList(Arrays.asList(1, 2, 3, 4, 5, 6))));
+        Node.printLinked(LinkedListReverse.loopReverse(LinkedListCreator.createLinkedList(Arrays.asList(1, 2, 3, 4, 5, 6))));
 
         Node.printLinked(LinkedListCreator.createLinkedList(Arrays.asList(1)));
         Node.printLinked( LinkedListReverse.reverse(LinkedListCreator.createLinkedList(Arrays.asList(1))));
