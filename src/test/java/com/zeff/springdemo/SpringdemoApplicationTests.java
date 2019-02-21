@@ -44,6 +44,8 @@ public class SpringdemoApplicationTests {
     @Test
     public void testBinary(){
         System.out.println(BinarySearch.search(new int[]{1,2,3,4,5,6},11));
+        System.out.println(BinarySearch.search(new int[]{1,2,3,4,5,6},2));
+        System.out.println(BinarySearch.search(new int[]{1,2,3,4,5,6},5));
     }
 }
 
