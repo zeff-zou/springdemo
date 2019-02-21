@@ -1,5 +1,6 @@
 package com.zeff.springdemo;
 
+import com.zeff.springdemo.binary.BinarySearch;
 import com.zeff.springdemo.combinations.Combinations;
 import com.zeff.springdemo.linked.LinkedListCreator;
 import com.zeff.springdemo.linked.LinkedListDelete;
@@ -38,6 +39,11 @@ public class SpringdemoApplicationTests {
     public void testCombination() {
 //        Combinations.combinations(new ArrayList<>(),Arrays.asList(1,2,3),2);
         Combinations.combinations(new ArrayList<>(),Arrays.asList(1,2,3,4,5),3);
+    }
+
+    @Test
+    public void testBinary(){
+        System.out.println(BinarySearch.search(new int[]{1,2,3,4,5,6},11));
     }
 }
 
