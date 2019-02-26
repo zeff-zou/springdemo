@@ -6,6 +6,8 @@ import com.zeff.springdemo.linked.LinkedListCreator;
 import com.zeff.springdemo.linked.LinkedListDelete;
 import com.zeff.springdemo.linked.LinkedListReverse;
 import com.zeff.springdemo.linked.Node;
+import com.zeff.springdemo.tree.TreeNode;
+import com.zeff.springdemo.tree.TreeTraversal;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -34,10 +36,9 @@ public class SpringdemoApplicationTests {
 
     }
 
-
     @Test
     public void testCombination() {
-//        Combinations.combinations(new ArrayList<>(),Arrays.asList(1,2,3),2);
+        Combinations.combinations(new ArrayList<>(),Arrays.asList(1,2,3),2);
         Combinations.combinations(new ArrayList<>(),Arrays.asList(1,2,3,4,5),3);
     }
 
@@ -47,5 +48,31 @@ public class SpringdemoApplicationTests {
         System.out.println(BinarySearch.search(new int[]{1,2,3,4,5,6},2));
         System.out.println(BinarySearch.search(new int[]{1,2,3,4,5,6},5));
     }
+
+    @Test
+    public void testTree(){
+	    //初始化树
+        TreeNode treeNode = new TreeNode("A");
+        treeNode.setLeft(new TreeNode("B"));
+        treeNode.getLeft().setLeft(new TreeNode("D"));
+        treeNode.getLeft().setRight(new TreeNode("E"));
+        treeNode.getLeft().getRight().setLeft(new TreeNode("G"));
+
+        treeNode.setRight(new TreeNode("C"));
+        treeNode.getRight().setRight(new TreeNode("F"));
+
+        //前序遍历
+        TreeTraversal.preOrder(treeNode);
+        System.out.println(" ");
+        //中序遍历
+        TreeTraversal.inOrder(treeNode);
+        System.out.println(" ");
+        //后序遍历
+        TreeTraversal.postOrder(treeNode);
+        System.out.println(" ");
+
+        TreeTraversal.createTree(Arrays.asList("A","B","D","E","G","C","F"),Arrays.asList("D","B","G","E","A","C","F"));
+    }
+
 }
 
