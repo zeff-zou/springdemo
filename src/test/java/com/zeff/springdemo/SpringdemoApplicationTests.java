@@ -2,6 +2,7 @@ package com.zeff.springdemo;
 
 import com.zeff.springdemo.binary.BinarySearch;
 import com.zeff.springdemo.combinations.Combinations;
+import com.zeff.springdemo.consistenthash.TreeMapConsistentHash;
 import com.zeff.springdemo.linked.LinkedListCreator;
 import com.zeff.springdemo.linked.LinkedListDelete;
 import com.zeff.springdemo.linked.LinkedListReverse;
@@ -74,5 +75,29 @@ public class SpringdemoApplicationTests {
         TreeTraversal.createTree(Arrays.asList("A","B","D","E","G","C","F"),Arrays.asList("D","B","G","E","A","C","F"));
     }
 
+    @Test
+    public void  testConsistentHash(){
+        ArrayList<String> arrayList = new ArrayList<String>(){{
+            add("note1");
+            add("note2");
+            add("note3");
+            add("note4");
+            add("note5");
+        }};
+
+        TreeMapConsistentHash consistentHash = new TreeMapConsistentHash();
+        arrayList.stream().forEach(note -> {
+            consistentHash.addNode(note);
+        });
+
+        consistentHash.toNodeString();
+        System.out.println(consistentHash.getNode("test1"));
+        System.out.println(consistentHash.getNode("test2"));
+        System.out.println(consistentHash.getNode("test3"));
+        System.out.println(consistentHash.getNode("test4"));
+        System.out.println(consistentHash.getNode("test5"));
+        System.out.println(consistentHash.getNode("test6"));
+        System.out.println(consistentHash.getNode("test7"));
+    }
 }
 
